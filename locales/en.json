@@ -1,0 +1,19 @@
+{
+  "common.save": "Save",
+  "common.cancel": "Cancel",
+  "common.delete": "Delete",
+  "nav.home": "Home",
+  "nav.settings": "Settings",
+  "nav.profile": "Profile",
+  "auth.login.title": "Log in to your account",
+  "auth.login.email": "Email address",
+  "auth.login.password": "Password",
+  "auth.login.submit": "Sign in",
+  "settings.general.language": "Language",
+  "settings.general.theme": "Theme",
+  "settings.notifications.email": "Email notifications",
+  "error.404": "Page not found",
+  "error.network": "Network error, please try again",
+  "item.count": "You have {{count}} items",
+  "item.invite": "Invite {{name}} to workspace"
+}
