@@ -1,0 +1,26 @@
+name: l10n
+on:
+  push:
+    branches: [main]
+    paths: ['locales/en.json']
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  sync:
+    runs-on: Ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: crowdin/github-action@v2
+        with:
+          upload_sources: true
+          download_translations: true
+          export_only_approved: true   # 只回写人审过的，坏串不进 PR
+          skip_untranslated_strings: true
+          localization_branch_name: l10n_crowdin
+          create_pull_request: true
+          pull_request_base_branch_name: main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
