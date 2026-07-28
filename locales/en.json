@@ -15,5 +15,6 @@
   "error.404": "Page not found",
   "error.network": "Network error, please try again",
   "item.count": "You have {{count}} items",
-  "item.invite": "Invite {{name}} to workspace"
+  "item.invite": "Invite {{name}} to workspace",
+  "invite":"Invite {{name}}"
 }
